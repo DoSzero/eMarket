@@ -14,17 +14,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.eMarket.AllCategory;
 import com.example.eMarket.R;
 import com.example.eMarket.adapter.CategoryAdapter;
+import com.example.eMarket.adapter.RecentlyViewedAdapter;
 import com.example.eMarket.model.Category;
+import com.example.eMarket.model.RecentlyViewed;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Catalog extends Fragment {
 
-    RecyclerView categoryRecyclerView;
+    RecyclerView categoryRecyclerView, recentlyViewedRecycler;
     CategoryAdapter categoryAdapter;
     List<Category> categoryList;
     TextView allCategory;
+
+    RecentlyViewedAdapter recentlyViewedAdapter;
+    List<RecentlyViewed> recentlyViewedList;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -32,6 +37,7 @@ public class Catalog extends Fragment {
 
          categoryRecyclerView = (RecyclerView) v.findViewById(R.id.categoryRecycler);
          allCategory = (TextView) v.findViewById(R.id.allCategoryImage);
+         recentlyViewedRecycler = (RecyclerView) v.findViewById(R.id.recently_item);
 
 
         allCategory.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +63,12 @@ public class Catalog extends Fragment {
 
         setCategoryRecycler(categoryList);
 
+        // adding data to model
+        recentlyViewedList = new ArrayList<>();
+        recentlyViewedList.add(new RecentlyViewed("Ноутбук Acer Nitro 5 AN517-51-51S3 Shale Black (NH.Q5CEU.011)", "Laptops", "Description Acer Nitro 5", "700", R.drawable.test_image1));
+        recentlyViewedList.add(new RecentlyViewed("XIAOMI Redmi Note 8 Pro 6/64GB Mineral Grey" , "Smartphones","Description XIAOMI Redmi Note 8 Pro" , "350", R.drawable.test_image2));
+        setRecentlyViewedRecycler(recentlyViewedList);
+
         return v;
     }
 
@@ -65,6 +77,13 @@ public class Catalog extends Fragment {
         categoryRecyclerView.setLayoutManager(layoutManager);
         categoryAdapter = new CategoryAdapter(getContext(),categoryDataList);
         categoryRecyclerView.setAdapter(categoryAdapter);
+    }
+
+    private void setRecentlyViewedRecycler(List<RecentlyViewed> recentlyViewedDataList) {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recentlyViewedRecycler.setLayoutManager(layoutManager);
+        recentlyViewedAdapter = new RecentlyViewedAdapter(getContext(),recentlyViewedDataList);
+        recentlyViewedRecycler.setAdapter(recentlyViewedAdapter);
     }
 
 }

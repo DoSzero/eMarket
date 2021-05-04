@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,30 +21,24 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,View.OnClickListener {
-
-    private SignInButton signInButton;
+    SignInButton signInButton;
     GoogleApiClient mGoogleApiClient;
 
-    // Button singOutButton;
-    private TextView statusTextView;
+    Button singOutBtton;
+    TextView statusTextView;
 
-    //22.04.2001
-    private EditText editTextEmail, editTextPassword;
-    private Button btnlogin;
-    //
     private  static  final String TAG="SingInActivity";
     private  static  final int RC_SIGN_IN =9001;
 
     //https://www.youtube.com/watch?v=SXlidHy-Tb8&t=179s
     //https://www.youtube.com/watch?v=Duz_0XkWP2I&t=574s
-    private SignInButton button;  // google standart naming in play-services-auth
-    private FirebaseAuth mAuth;
+    SignInButton button;  // google standart naming in play-services-auth
+    FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,25 +68,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
                 .build();
 
-        // Initialization TextView
         statusTextView = (TextView) findViewById(R.id.status_textview);
-        // Initialization Google Button
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setOnClickListener(this);
 
-        /*
-        singOutButton = (Button) findViewById(R.id.singOutBtton);
-        singOutButton.setOnClickListener;
-        */
+        //singOutButton = (Button) findViewById(R.id.singOutBtton);
+        //singOutButton.setOnClickListener;
 
-        // Initialization for Button Login
-        btnlogin =(Button) findViewById(R.id.btnlogin);
-        btnlogin.setOnClickListener(this);
-        // Initialization for EditText
-        editTextEmail = (EditText) findViewById(R.id.editTextPassword);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        // Firebase auth
-        mAuth = FirebaseAuth.getInstance();
     }
 
 
@@ -109,66 +89,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 * singOut();
                 * break;
                 * */
-            case R.id.btnlogin:
-                // method
-                userLogin();
-                break;
 
         }
-    }
-    // Method Login  for user functionality
-    private void userLogin() {
-        String  email  = editTextEmail.getText().toString().trim();
-        String  password = editTextPassword.getText().toString().trim();
-        /*
-        // Is user empty ?
-        if (email.isEmpty()){
-            editTextEmail.setError("Email is required !! ");
-            editTextEmail.requestFocus();
-            return;
-        }
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please enter valid email!");
-            editTextEmail.requestFocus();
-            return;
-        }
-
-        if (password.isEmpty()){
-            editTextPassword.setError("Please enter right Password !");
-            editTextPassword.requestFocus();
-            return;
-        }
-        // Password length
-        if (password.length()<5){
-            editTextPassword.setError("Minimum of length of password should be 5 symbols! ");
-            editTextPassword.requestFocus();
-            return;
-        }
-
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-           if (task.isSuccessful()){
-               //redirect to (FROM Login TO main (Fragments ))
-               //finish();
-               startActivity(new Intent(LoginActivity.this,MainActivity.class));
-           }  else {
-               Toast.makeText(LoginActivity.this,"Error mAuth", Toast.LENGTH_LONG).show();
-           }
-            }
-        });
-        */
-
-        // Entry without database
-        btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     // Version in video but old method
