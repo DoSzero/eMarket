@@ -14,4 +14,4 @@ This application is a simple version of the project for me to learn to program f
 
 ____
 # :white_check_mark: Registration 
-![](eMarket/images/E001.png)
+![](images/E001.png)
