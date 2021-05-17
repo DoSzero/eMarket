@@ -12,7 +12,7 @@ ____
 6) Creating product catalogs (Category) :white_check_mark:
 7) Create a plus button to add an image of the future product, which is stored in the firebase :white_check_mark:
 
-
+# Screenshot
 ____
 # :white_check_mark: Autorisation (Authorization)
 ![](images/E001.png)
