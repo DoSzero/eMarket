@@ -15,3 +15,19 @@ This application is a simple version of the project for me to learn to program f
 ____
 # :white_check_mark: Registration 
 ![](images/E001.png)
+# :white_check_mark: Registration 
+![](images/E002.png)
+# :white_check_mark: Registration 
+![](images/E003.png)
+# :white_check_mark: Registration 
+![](images/E004.png)
+# :white_check_mark: Registration 
+![](images/E005.png)
+# :white_check_mark: Registration 
+![](images/E006.png)
+# :white_check_mark: Registration 
+![](images/E007.png)
+# :white_check_mark: Registration 
+![](images/E008.png)
+# :white_check_mark: Registration 
+![](images/E009.png)
