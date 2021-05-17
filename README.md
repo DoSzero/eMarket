@@ -11,3 +11,5 @@ This application is a simple version of the project for me to learn to program f
 6) Creating product catalogs :white_check_mark:
 7) Create a plus button to add an image of the future product, which is stored in the firebase :white_check_mark:
 
+![](path/to/image.png)
+eMarket/images/E001
