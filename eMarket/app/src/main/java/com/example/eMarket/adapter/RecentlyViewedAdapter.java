@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.eMarket.ProductDetails;
@@ -27,6 +26,7 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
     public RecentlyViewedAdapter(Context context, List<RecentlyViewed> recentlyViewedList) {
         this.context = context;
         this.recentlyViewedList = recentlyViewedList;
+
     }
 
     @NonNull
@@ -37,6 +37,8 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         return new RecentlyViewedViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull RecentlyViewedViewHolder holder, final int position) {
 
@@ -44,6 +46,7 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         holder.description.setText(recentlyViewedList.get(position).getDescription());
         holder.price.setText(recentlyViewedList.get(position).getPrice());
         holder.image.setBackgroundResource(recentlyViewedList.get(position).getImageUrl());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,5 +85,7 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
 
         }
     }
+
+
 
 }

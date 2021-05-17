@@ -8,6 +8,7 @@ public class RecentlyViewed {
     String price;
     int imageUrl;
 
+
     public RecentlyViewed(String name, String category, String description, String price, int imageUrl) {
         this.name = name;
         this.category = category;
@@ -48,5 +49,6 @@ public class RecentlyViewed {
     public int getImageUrl() { return imageUrl; }
 
     public void setImageUrl(int image) { this.imageUrl = imageUrl; }
+
 }
 

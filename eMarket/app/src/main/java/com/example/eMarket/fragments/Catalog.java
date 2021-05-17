@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -68,6 +69,8 @@ public class Catalog extends Fragment {
         recentlyViewedList.add(new RecentlyViewed("Ноутбук Acer Nitro 5 AN517-51-51S3 Shale Black (NH.Q5CEU.011)", "Laptops", "Description Acer Nitro 5", "700", R.drawable.test_image1));
         recentlyViewedList.add(new RecentlyViewed("XIAOMI Redmi Note 8 Pro 6/64GB Mineral Grey" , "Smartphones","Description XIAOMI Redmi Note 8 Pro" , "350", R.drawable.test_image2));
         setRecentlyViewedRecycler(recentlyViewedList);
+
+
 
         return v;
     }
