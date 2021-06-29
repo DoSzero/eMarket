@@ -13,34 +13,55 @@ ____
 7) Create a plus button to add an image of the future product, which is stored in the firebase :white_check_mark:
 
 # Screenshot
-____
+
 # :white_check_mark: Autorisation (Authorization)
-![](images/E001.png)
-____
+<p align="center">
+<img src="images/E001.png" alt="drawing1" width="350">
+</p>
+
+*Function for AUTHORIZATION switch off , for activate disable comments // 
+
 # :white_check_mark: Registration 
-![](images/E002.png)
-____
+<p align="center">
+<img src="images/E002.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: MainActivity (Fragment)
-![](images/E003.png)
-____
+<p align="center">
+<img src="images/E003.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Category
-![](images/E004.png)
-____
+<p align="center">
+<img src="images/E004.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Product Details
-![](images/E005.png)
-____
+<p align="center">
+<img src="images/E005.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Btn Plus 
-![](images/E006.png)
-____
+<p align="center">
+<img src="images/E006.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Add an image in the firebase
-![](images/E007.png)
-____
+<p align="center">
+<img src="images/E007.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Select images  
-![](images/E008.png)
-____
+<p align="center">
+<img src="images/E008.png" alt="drawing1" width="350">
+</p>
+
 # :white_check_mark: Demonstrated saved Images #1
-![](images/E009.png)
-____
+<p align="center">
+<img src="images/E009.png" alt="drawing1" width="700">
+</p>
+
 # :white_check_mark:  Demonstrated saved Images #2
-![](images/E010.png)
-____
+<p align="center">
+<img src="images/E010.png" alt="drawing1" width="700">
+</p>
